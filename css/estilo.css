@@ -1,0 +1,385 @@
+/* ===== Estilo Geral ===== */
+
+/* Reset básico de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho total dos elementos */
+}
+
+/* Estilos base para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Define a altura mínima do body */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    color: #333333; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilos para links */
+a:link, a:active, a:visited {
+    color: #315e8a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Grid Responsivo (960px) ===== */
+
+/* Container principal para linhas */
+.linha {
+    width: 100%; /* Define a largura total */
+    max-width: 960px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+    overflow: auto; /* Limpa floats internos */
+    padding: 5px 0;
+}
+
+/* Estilos base para colunas */
+.coluna {
+    padding: 0 10px;
+    float: left;
+    margin-bottom: 20px; /* Espaçamento inferior entre colunas */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+/* Definição das larguras das colunas em porcentagem */
+.col1 { width: 10%; }
+.col2 { width: 20%; }
+.col3 { width: 30%; }
+.col4 { width: 40%; }
+.col5 { width: 50%; }
+.col6 { width: 60%; }
+.col7 { width: 70%; }
+.col8 { width: 80%; }
+.col9 { width: 90%; }
+.col10 { width: 100%; }
+.col11 { width: 100%; }
+.col12 { width: 100%; }
+
+/* ===== Estilos Reutilizáveis ===== */
+
+/* Remove padding ou margin quando necessário */
+.sem-padding { padding: 0 !important; }
+.sem-margin { margin: 0 !important; }
+
+/* Estilos para cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 15px 0 10px 0; /* Espaçamento superior e inferior */
+}
+
+/* Espaçamento entre itens de listas */
+ul li, ol li {
+    margin-bottom: 5px;
+}
+
+/* Listas inline (horizontais) */
+ul.inline li, ol.inline li {
+    display: inline;
+    margin-right: 15px;
+}
+
+ul.inline li:last-child, ol.inline li:last-child {
+    margin-right: 0;
+}
+
+/* Listas sem marcadores */
+ul.sem-marcador, ol.sem-marcador {
+    list-style: none;
+}
+
+/* Estilos para botões */
+a.botao, input.botao {
+    background: #1f3c58;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #ebebeb;
+    cursor: pointer;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+}
+
+a.botao:hover, input.botao:hover {
+    background: #315e8a;
+    text-decoration: none;
+}
+
+/* ===== Ajustes nas Imagens ===== */
+
+/* Estilo padrão para imagens */
+img {
+    width: 100%;
+    max-width: 150px; /* Tamanho máximo da imagem */
+    height: auto;
+    border: 2px solid #ccc; /* Borda ao redor da imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    display: inline-block;
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* ===== Layout do Site ===== */
+
+/* Cabeçalho */
+.header {
+    background: #d5ee1ab8; /* Cor de fundo */
+}
+
+h1.logo {
+    font-weight: 300;
+    color: #022037;
+    letter-spacing: -2px; /* Espaçamento entre letras */
+}
+
+/* Conteúdo extra */
+.conteudo-extra {
+    background: #f1f2ea; /* Cor de fundo */
+}
+
+/* Rodapé */
+.footer {
+    background: #1f3c58;
+    color: #ebebeb; /* Cor do texto */
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 100;
+}
+
+/* Menu de navegação */
+.menu {
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.menu li a {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    background: #1f3c58;
+    color: #ebebeb;
+}
+
+/* Notícias */
+ul.noticias li {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+ul.noticias li img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+    float: left;
+}
+
+ul.noticias li h4 {
+    margin: -2px 0 5px 0;
+    font-weight: 500;
+}
+
+ul.noticias li p {
+    margin: 5px 0;
+    font-weight: 300;
+}
+
+ul.noticias li p a {
+    font-weight: 500;
+}
+
+/* Formulário de contato */
+.contato label {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.contato input, .contato textarea {
+    display: block;
+    margin-bottom: 15px;
+    padding: 5px 2%;
+    width: 96%; /* Largura responsiva */
+}
+
+.contato textarea {
+    height: 150px;
+}
+
+.contato input.botao {
+    width: auto;
+}
+
+/* ===== Ajustes Flexíveis e Responsivos ===== */
+
+/* Cabeçalho principal */
+header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Layout principal */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh; /* Altura mínima da área de conteúdo */
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    background-color: #ffdd57;
+    width: 250px;
+    padding: 20px;
+    min-width: 200px; /* Largura mínima para evitar colapso */
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: padding-left 0.3s ease; /* Animação suave */
+}
+
+.sidebar ul li a:hover {
+    background-color: #beb586;
+    padding-left: 10px;
+}
+
+/* Área de conteúdo principal */
+.content {
+    flex: 1; /* Expande para ocupar o espaço disponível */
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-width: 300px; /* Largura mínima para evitar colapso */
+}
+
+.content img {
+    width: 100%;
+    max-width: 700px; /* Limita a largura máxima das imagens */
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Estilos para botões */
+.botao {
+    display: inline-block;
+    background: #1f3c58;
+    color: #ebebeb;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.botao:hover {
+    background: #315e8a;
+    transform: translateY(-5px);
+}
+
+/* ===== Responsividade ===== */
+
+/* Ajustes para telas menores que 1024px */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        flex-direction: column; /* Empilha o conteúdo verticalmente */
+    }
+
+    .sidebar, .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header .logo {
+        font-size: 36px; /* Diminui o tamanho da logo */
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ajustes para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .header .logo {
+        font-size: 24px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+}
+
+/* ===== Ajustes Específicos para a Seção de Equipe ===== */
+
+/* Imagens da equipe */
+img {
+    width: 250px; /* Largura fixa */
+    height: 250px; /* Altura fixa */
+    object-fit: contain; /* Ajusta a imagem sem cortar ou distorcer */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+}
+
+
+/* Ajuste das colunas na seção de equipe */
+.coluna {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.col6, .col4 {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.col6 {
+    width: 50%; /* Colunas ocupando 50% da largura */
+}
+
+.col4 {
+    width: 33.33%; /* Colunas ocupando 33.33% da largura */
+}
+
+/* Clearfix para colunas flutuantes */
+.linha::after {
+    content: "";
+    display: table;
+    clear: both;
+}
